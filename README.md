@@ -6,7 +6,7 @@ Data analysis projects using data mining, machine learning, etc.
 
 ## Contents
 
-### Market Research Analysis
+### Business Location Analysis (Business_Location_Analysis/Business_Location_Analysis.ipynb)
 
 - Simple, but intuitive and effect logic to search for an optimum location for business development.
-- Mainly a frequency analysis, with the help of google api
+- Based on simple frequency analysis, with the help of google api.
