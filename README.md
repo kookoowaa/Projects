@@ -10,6 +10,7 @@ Data analysis projects using data mining, machine learning, etc.
 
 - Simple, but intuitive and effect logic to search for an optimum location for business development.
 - Based on simple frequency analysis, with the help of google api.
+- "Radar search" deprecated, use "nearby search" now (no longer free)
 
 ### [Multi-SKUs Demand Forecast]
 
