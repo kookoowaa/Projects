@@ -45,6 +45,7 @@ print("Initiating program...")
 beginning = time.time()
 
 
+
 ## Define functions
 #### function to sort sales by menu
 def pd_mix_func(file):
@@ -134,8 +135,6 @@ for i in range(1, n_store+1):
     driver.implicitly_wait(3)
     driver.get(product_mix)
     driver.implicitly_wait(3)
-elap_min, elap_sec = np.divmod(time.time()-beginning, 60)
-print("Data fetching finished at {}min, {}second". format(int(elap_min), int(elap_sec)))
 
 
 
@@ -205,7 +204,6 @@ for store in stores:
 
 
 ## Merge reports onto one excel sheet
-today = datetime.date.today()
 writer = pd.ExcelWriter('Weekly/weekly_report({}{}-{}{}).xlsx'.format(date_from[1], date_from[0], date_to[1], date_to[0]), engine='xlsxwriter')
 
 daily_net_sales.to_excel(writer, sheet_name="raw data")
