@@ -38,7 +38,7 @@ product_mix = 'https://kyochon.revelup.com/reports/product_mix/data/?sort_by=&so
 #### NOTE that the report can be downloaded via URL API, per store you are logged onto (28 Dec. 2018)
 
 #### Define directory
-user_name = input("Enter your user name please (to access download folder): ")
+user_name = "박찬우"
 directory = 'c:/Users/{}/Downloads/'.format(user_name)  ## adjustment maybe needed accordingly
 save_direct = 'c:/Users/{}/Desktop/'.format(user_name)
 
