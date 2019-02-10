@@ -18,7 +18,7 @@ driver = webdriver.Chrome("c:/git/chromedriver.exe")
 time.sleep(1)
 
 #### Define stores to crawl data from
-stores = ["arcoris", "ipc", "setia-city", "mytown", "genting", "pearl", "penang", "sunway-pyramid", "pavilion", "1-utama"]
+stores = ["arcoris", "ipc", "setia-city", "mytown", "genting", "pearl", "penang", "sunway-pyramid", "pavilion", "1-utama", "ioi-puchong"]
 
 #### Define date variables
 date_from= []
