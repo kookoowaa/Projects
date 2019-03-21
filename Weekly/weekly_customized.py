@@ -234,6 +234,10 @@ writer.save()
 
 
 
+# Open directory with output
+os.startfile(save_direct + 'Weekly/')
+
+
 ## Return time elapsed
 elap_min, elap_sec = np.divmod(time.time()-beginning, 60)
 print("Total process finished at {}min, {}second". format(int(elap_min), int(elap_sec)))
