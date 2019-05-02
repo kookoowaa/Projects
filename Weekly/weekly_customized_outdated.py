@@ -24,8 +24,7 @@ stores = ["arcoris", "ipc", "setia-city", "mytown", "genting", "pearl", "penang"
 date_from= []
 date_from.append(input('date from(dd): '))
 date_from.append(input('month from(mm): '))
-date_from.append('2019')
-#date_from.append(input('year from(yyyy): '))
+date_from.append(input('year from(yyyy): '))
 date_from = datetime.datetime.strptime(''.join(date_from),'%d%m%Y')
 range_from = '{}%2F{}%2F{}+00%3A00%3A00'.format(str(date_from.day).zfill(2), str(date_from.month).zfill(2), date_from.year)
 
@@ -122,7 +121,7 @@ driver.find_element_by_xpath('//*[@id="form-login"]/fieldset/div[3]/input').clic
 time.sleep(3)
 
 #### Open store lists
-driver.find_element_by_xpath('//*[@id="header"]/div[2]/div[3]/div[2]').click()
+driver.find_element_by_xpath('//*[@id="header"]/div[2]/div[2]/div[2]').click()
 time.sleep(5)
 
 #### Retrieve total number of stores
@@ -135,7 +134,7 @@ for i in range(1, n_store+1):
     #### Access Store
     if i > 1:
         try:
-            driver.find_element_by_xpath('//*[@id="header"]/div[2]/div[3]/div[2]').click()
+            driver.find_element_by_xpath('//*[@id="header"]/div[2]/div[2]/div[2]').click()
         except:
             print('error on store #{}'.format(i))
         time.sleep(5)
