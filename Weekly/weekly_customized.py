@@ -138,6 +138,7 @@ for i in range(1, n_store+1):
             driver.find_element_by_xpath('//*[@id="header"]/div[2]/div[3]/div[2]').click()
         except:
             print('error on store #{}'.format(i))
+	    ### 업데이트 에러가 나는 경우가 종종 있는데,exception_class(message, screen, stacktrace), 해당 케이스 명시할 경우 업데이트 항목 삭제 가능
         time.sleep(5)
     driver.find_element_by_xpath('//*[@id="establishments-tree"]/div/div[3]/ul/li[1]/ul/li[{}]/span[2]/span[3]'.format(i)).click()
     time.sleep(5)
