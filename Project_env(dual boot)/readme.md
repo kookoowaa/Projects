@@ -25,12 +25,23 @@ ___
 ___
 ## Manjaro 설치 및 기본 세팅
 - 리눅스, 특히 아치 리눅스의 경우 하나하나 다 찾아서 세팅해 주어야 하는 불편함이 있음
-- 
+
+- 몇가지 주요 세팅에 대해 알아보자:
+
+  > 1. `pacman` 업데이트
+  > 2. 한글 입력기
+  > 3. 그래픽 드라이버
+  > 4. 구글 크롬
+  > 5. 
 
 
+
+
+
+https://withjeon.com/2017/11/07/arch-linux-install-guide/#0403
+
+http://blog.naver.com/PostView.nhn?blogId=sun30812&logNo=221431933809
 
  https://palpit.tistory.com/765 
 
  http://blog.naver.com/PostView.nhn?blogId=angelkim88&logNo=221702038231 
-
- https://bcho.tistory.com/1311 
