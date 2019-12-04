@@ -12,7 +12,7 @@ ___
 - *정정 - 알고 보니 2019년 12월 기준 MX Linux가 1위에 위치 - 데비안 기반의 가벼운 미들웨어 os*
 - Manjaro 이후 많이 사용되는 리눅스는 Linux Mint로 Ubuntu 계열임 (우분투 기반, 데비안 기반은 LMDE)
 - 공식적으로 지원되는 Ubuntu를 사용하는 것도 좋은 선택
-- Manjaro에 도전
+- Manjaro에 도전 (Manjaro는 라즈베리파이 용 os도 지원)
 
 ___
 
