@@ -35,7 +35,25 @@ ___
   > 5. 
 
 ### 1. `pacman` 업데이트
-- `pacman`은 아치 리눅스에서 패키지를 관리하는... 로 우분투의 `apt-get`과 유사한 역할을 함
+- `pacman`은 아치 리눅스의 패키지 관리자로 우분투의 `apt-get`과 유사한 역할을 함
+
+> 리눅스/유닉스의 주요 패키지 관리자를 다시 한번 소개하면 다음과 같습니다.
+>
+> 데비안 : apt-get (Advanced Packaging Tool)
+> 페도라(redhat 계열, CentOS) : yum, rpm
+> 아치 리눅스 : pacman
+> MAC OS : homebrew, MacPorts
+>
+> 출처: https://erider.co.kr/137 [시간을 달리는 e라이더 <전기 자전거 여행, IT 스토리>]
+
+- 몇가지 중요한 명령어를 살펴보면:
+
+  > - `sudo pacman -Syu` : 시스템의 모든 패키지를 업그레이드
+  > - `sudo pacman -Ss[또는 Qs]` : 패키지를 검색 [설치가 되어있는 패키지 검색]
+  > - `sudo pacman -S` : **패키지 설치**
+  > - `sudo pacman -Rs` : 패키지 삭제
+
+- manjaro 설치 후 세팅할 내용은 1) 서버 업데이트 변경, 2) `yay`, `debtap`설치
 
 
 
