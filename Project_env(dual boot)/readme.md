@@ -12,7 +12,7 @@ ___
 - *정정 - 알고 보니 2019년 12월 기준 MX Linux가 1위에 위치 - 데비안 기반의 가벼운 미들웨어 os*
 - Manjaro 이후 많이 사용되는 리눅스는 Linux Mint로 Ubuntu 계열임 (우분투 기반, 데비안 기반은 LMDE)
 - 공식적으로 지원되는 Ubuntu를 사용하는 것도 좋은 선택
-- Manjaro에 도전 (Manjaro는 라즈베리파이 용 os도 지원)
+- Manjaro에 도전 (Manjaro는 라즈베리파이 용 os도 지원, Rufus로 세팅이 되지 않아 Etcher 사용)
 
 ___
 
@@ -55,14 +55,16 @@ ___
 
 - manjaro 설치 후 세팅할 내용은 1) 서버 업데이트 변경, 2) `yay`, `debtap`설치
 
+https://kkamagui.tistory.com/m/909 - NVIDIA
 
+https://m.blog.naver.com/wdhyup/221683615856 - 한글입력기
 
+http://ders45.blogspot.com/2017/03/manjaro-linux-17.html?m=1 - 기타 세팅 가이드
 
+https://withjeon.com/2017/11/07/arch-linux-install-guide/#0403 - 세팅가이드
 
-https://withjeon.com/2017/11/07/arch-linux-install-guide/#0403
+http://sun30812.blog.me/221431933809 - 세팅가이드 (KDE)
 
-http://blog.naver.com/PostView.nhn?blogId=sun30812&logNo=221431933809
+ https://palpit.tistory.com/765  - 듀얼부팅
 
- https://palpit.tistory.com/765 
-
- http://blog.naver.com/PostView.nhn?blogId=angelkim88&logNo=221702038231 
+ http://blog.naver.com/PostView.nhn?blogId=angelkim88&logNo=221702038231  - 듀얼부팅
