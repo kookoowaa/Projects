@@ -19,3 +19,4 @@
 ## 2. Manjaro 대신 Raspbian 시도
 
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
+- https://rightway-park.tistory.com/3
