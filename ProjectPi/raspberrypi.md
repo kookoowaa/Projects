@@ -20,3 +20,4 @@
 
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
 - https://rightway-park.tistory.com/3
+- 설치 후 한글 세팅은 `sudo apt-get fonts-unfonts-core`로 설정 가능
