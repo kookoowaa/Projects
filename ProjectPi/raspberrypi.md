@@ -22,4 +22,5 @@
 - https://rightway-park.tistory.com/3
 - 설치 후 한글 세팅은 `sudo apt-get fonts-unfonts-core`로 설정 가능
 - KVM 스위치 구매 고려 중 (마우스 확장기능 필수)
+- https://dgkim5360.tistory.com/entry/basic-setup-of-korean-environment-for-arch-linux
 
