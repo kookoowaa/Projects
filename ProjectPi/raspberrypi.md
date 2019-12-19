@@ -15,7 +15,13 @@
 ![](Manjaro_error.jpg)
 
 - 작업환경이 윈도우 피씨 외 라즈베리파이를 활용할 예정이고, 물리적 자리 여건 상 [모니터2, 키보드1, 마우스1]을 공유할 방법을 찾던 중 `kvm 스위치`라는 입력기 선택 허브(?) 를 발견
+
 - http://blog.naver.com/PostView.nhn?blogId=lecahel&logNo=221719483747 참조하여 초기 세팅 
+
+  > 1. 설치 (locale은 ko-kr utf-8로)
+  > 2. 한글 폰트 설치 `sudo pacman -S noto-fonts-cjk`
+  > 3. 시스템 업그레이드 `sudo pacman -Syu`
+  > 4. 한글 입력기 설치 (uim)
 
 ## 2. Manjaro 대신 Raspbian 시도
 
