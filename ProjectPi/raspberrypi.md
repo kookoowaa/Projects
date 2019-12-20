@@ -22,6 +22,7 @@
   > 2. 한글 폰트 설치 `sudo pacman -S noto-fonts-cjk`
   > 3. 시스템 업그레이드 `sudo pacman -Syu`
   > 4. 한글 입력기 설치 (uim)
+- https://sensebench.tistory.com/407
 
 ## 2. Manjaro 대신 Raspbian 시도
 
