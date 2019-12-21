@@ -23,7 +23,7 @@
   > 3. 시스템 업그레이드 `sudo pacman -Syu`
   > 4. 한글 입력기 설치 (uim)
 - https://sensebench.tistory.com/407
-
+- http://www.dorajistyle.pe.kr/2014/04/manjaro-linux.html
 ## 2. Manjaro 대신 Raspbian 시도
 
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
