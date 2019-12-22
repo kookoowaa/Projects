@@ -20,14 +20,51 @@
   > 5. `pip`, `jupyter notebook`, `gcloud sdk` 설치
 
   1. 설치
+
      - 설치는 크게 특이사항 없음
      - username, password, timezone 등을 지정해 주면 자동으로 설치
      - 하나 고려할 점은 locale 언어를 한국어로 하고 싶다면 locale을 `ko-kr utf-8`로 지정해 주는 것이 편함
-  2. 한글 폰트 설치
-     - 위에서 locale을 `ko-kr utf-8`로 지정하면 설치 후 메뉴들이 깨져 보이는 것을 발견할 수 있음
-     - 
 
-  
+  2. 한글 폰트 설치
+
+     - 위에서 locale을 `ko-kr utf-8`로 지정하면 설치 후 메뉴들이 깨져 보이는 것을 발견할 수 있음
+     - 이는 한글 폰트가 없어서 나타나는 현상으로, 폰트만 설치하면 크게 문제없이 활용 가능
+     - 폰트는 선택하기 나름이지만, 가독성을 감안하여 noto 서체를 추천
+     - 쉘에서 `sudo pacman -S noto-fonts-cjk`를 실행하여 폰트 설치 후  시작메뉴를 눌러보면 한글이 설치된 것을 확인할 수 있음
+
+  3. 시스템 업그레이드
+
+     - 설치 후 각종 패키지를 최신 버전으로 업데이트 진행
+     - 업데이트는 `sudo pacman -Syu`로 한번에 가능
+
+  4. 한글 입력기 설치
+
+     - 한글 입력기는 manjaro와 가장 잘 맞는다는 `uim`을 선택
+     - 설치는 `sudo pacman -S uim`으로 진행
+     - 설치 후 2가지 설정 필요:
+     - `UIM` 세팅:
+
+     > - Application Menu > settings > imput method
+     > - Global settings에서: 1)`Specify default IM`체크, 2) `default input metho` `벼루`로 설정, 3) `Enable input methods` 벼루만 남기고 제거 4) `Enable IM switching by hotkey` 체크 해제, 5) `Enable input method toggle by hot keys` 체크 해제
+     > - `Byeoru key bindings 1`에서: 1) `Byeoru on`에 한글키 추가, 2) `Byeoru off`에 한글키 추가
+
+     - `xprofile` 세팅:
+
+     > - xprofile 열기
+     >
+     >   ```shell
+     >   sudo nano ~/.xpofile
+     >   ```
+     >
+     > - `xprofile`에 IM 설정
+     >
+     >   ```
+     >   IM="uim"
+     >   export GTK_IM_MODULE=$IM
+     >   export XMODIFIERS=@im=$IM
+     >   export QT_IM_MODULE=$IM
+     >   export XIM=$IM
+     >   ```
 
 - <del>현재 업데이트 후 `brcmfmac` 에러 반환 후 os 진입이 안되는 현상이 나타나 디버깅이 필요</del> 불안정한 네트워크로 인해 업데이트가 중단되면서 os 진입이 안되는 현상이 발생했었음
 
