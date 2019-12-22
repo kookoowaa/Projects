@@ -6,10 +6,29 @@
 ## 1. `Manjaro ARM` 설치
 
 - Manjaro 설치 자체는 크게 어려울 것이 없음
+
 - https://manjaro.org/download/#arm 에서 KDE, XFCE, Minimal 버전으로 각각 다운로드 가능
+
 - 다운받은 Manjaro는 `Etcher`를 활용하여 sd 카드에 준비하여 라즈베리 파이에 연결 (`Rufus`는 Arch계열 리눅스 설치 때 추가적인 설정이 필요하여 제외)
-- 설치 자체는 UI를 따라 차례대로 진행하면 됨
-- 설치 후 `sudo pacman -Syu`로 모든 패키지를 롤링 릴리즈 (업데이트)
+
+- 설치 및 기본 세팅은 다음 순서로 진행:
+
+  > 1. 설치 (locale은 ko-kr utf-8로)
+  > 2. 한글 폰트 설치 `sudo pacman -S noto-fonts-cjk`
+  > 3. 시스템 업그레이드 `sudo pacman -Syu`
+  > 4. 한글 입력기 설치 (uim)
+  > 5. `pip`, `jupyter notebook`, `gcloud sdk` 설치
+
+  1. 설치
+     - 설치는 크게 특이사항 없음
+     - username, password, timezone 등을 지정해 주면 자동으로 설치
+     - 하나 고려할 점은 locale 언어를 한국어로 하고 싶다면 locale을 `ko-kr utf-8`로 지정해 주는 것이 편함
+  2. 한글 폰트 설치
+     - 위에서 locale을 `ko-kr utf-8`로 지정하면 설치 후 메뉴들이 깨져 보이는 것을 발견할 수 있음
+     - 
+
+  
+
 - <del>현재 업데이트 후 `brcmfmac` 에러 반환 후 os 진입이 안되는 현상이 나타나 디버깅이 필요</del> 불안정한 네트워크로 인해 업데이트가 중단되면서 os 진입이 안되는 현상이 발생했었음
 
 ![](Manjaro_error.jpg)
@@ -18,12 +37,6 @@
 
 - http://blog.naver.com/PostView.nhn?blogId=lecahel&logNo=221719483747 참조하여 초기 세팅 
 
-  > 1. 설치 (locale은 ko-kr utf-8로)
-  > 2. 한글 폰트 설치 `sudo pacman -S noto-fonts-cjk`
-  > 3. 시스템 업그레이드 `sudo pacman -Syu`
-  > 4. 한글 입력기 설치 (uim)
-  > 5. `pip`, `jupyter notebook`, `gcloud sdk` 설치
-  
 - https://sensebench.tistory.com/407
 - http://www.dorajistyle.pe.kr/2014/04/manjaro-linux.html
 
