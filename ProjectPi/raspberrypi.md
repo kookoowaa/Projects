@@ -36,6 +36,9 @@
 
      - 설치 후 각종 패키지를 최신 버전으로 업데이트 진행
      - 업데이트는 `sudo pacman -Syu`로 한번에 가능
+     - <del>현재 업데이트 후 `brcmfmac` 에러 반환 후 os 진입이 안되는 현상이 나타나 디버깅이 필요</del> 불안정한 네트워크로 인해 업데이트가 중단되면서 os 진입이 안되는 현상이 발생했었음 (재설치 후 문제 없음)
+
+     ![](Manjaro_error.jpg)
 
   4. 한글 입력기 설치
 
@@ -66,11 +69,6 @@
      >   export XIM=$IM
      >   ```
 
-- <del>현재 업데이트 후 `brcmfmac` 에러 반환 후 os 진입이 안되는 현상이 나타나 디버깅이 필요</del> 불안정한 네트워크로 인해 업데이트가 중단되면서 os 진입이 안되는 현상이 발생했었음
-
-![](Manjaro_error.jpg)
-
-- 작업환경이 윈도우 피씨 외 라즈베리파이를 활용할 예정이고, 물리적 자리 여건 상 [모니터2, 키보드1, 마우스1]을 공유할 방법을 찾던 중 `kvm 스위치`라는 입력기 선택 허브(?) 를 발견
 
 - http://blog.naver.com/PostView.nhn?blogId=lecahel&logNo=221719483747 참조하여 초기 세팅 
 
@@ -79,6 +77,10 @@
 
 ## 2. Manjaro 대신 Raspbian 시도
 
+- Rolling Release의 이점 떄문에 여러 난관에도 불구하고 Manjaro를 사용하려 했으나 몇가지 문제로 인해 우분투 계열의 `Raspbian`으로 넘어가기로 결정
+  1. `pip` 를 통해 파이썬 패키지를 관리할 시 `pacman`과 충돌 (`pip` vs `pacman` 누가 버전관리를 할것인가...)
+  2. Google Cloud에서 활용하기 어려움 (`Cloud sdk`의 경우도 우분와 데비안만 지원)
+- 
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
 - https://rightway-park.tistory.com/3
 - 설치 후 한글 세팅은 `sudo apt-get fonts-unfonts-core`로 설정 가능
