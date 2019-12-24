@@ -17,7 +17,7 @@
   > 2. 한글 폰트 설치 `sudo pacman -S noto-fonts-cjk`
   > 3. 시스템 업그레이드 `sudo pacman -Syu`
   > 4. 한글 입력기 설치 (uim)
-  > 5. `pip`, `jupyter notebook`, `gcloud sdk` 설치
+  > 5. 파이썬 분석환경 구축 
 
   1. 설치
 
@@ -68,10 +68,18 @@
      >   export QT_IM_MODULE=$IM
      >   export XIM=$IM
      >   ```
+     
+  5. Python 분석환경 구축
+
+     - `pip`, `jupyter notebook`, `gcloud sdk` 등 python 환경을 구축하려다 보니 몇가지 문제에 맞닥뜨리게 됨
+       1. `pip` 를 통해 파이썬 패키지를 관리할 시 `pacman`과 충돌 (`pip` vs `pacman` 누가 버전관리를 할것인가...)
+       2. Google Cloud에서 활용하기 어려움 (GCP에서 공식적으로 지원하는 리눅스는 CentOS/Debian/Red Hat/Ubuntu 4종으로 arch 리눅스를 사용시 애로사항이 많을 것으로 예상)
+     - 1번 문제는 `pip`를 포기하고 `pacman` (그리고 `aur`)만 사용하는 것으로 대체 (**The right way to install PYTHON packages in ArchLinux**: i.e. `pacman -S python-pandas`)
+     - 2번 문제는 수동으로 `google-cloud-sdk`를 설치하거나 `aur`을 통하는 방식으로 해결 (https://cloud.google.com/sdk/docs/quickstart-linux, https://dev.to/nabbisen/setting-up-google-cloud-sdk-of-gcp-on-archmanjaro-linux-19mk)
 
 
+- 
 - http://blog.naver.com/PostView.nhn?blogId=lecahel&logNo=221719483747 참조하여 초기 세팅 
-
 - https://sensebench.tistory.com/407
 - http://www.dorajistyle.pe.kr/2014/04/manjaro-linux.html
 
@@ -79,7 +87,7 @@
 
 - Rolling Release의 이점 떄문에 여러 난관에도 불구하고 Manjaro를 사용하려 했으나 몇가지 문제로 인해 우분투 계열의 `Raspbian`으로 넘어가기로 결정
   1. `pip` 를 통해 파이썬 패키지를 관리할 시 `pacman`과 충돌 (`pip` vs `pacman` 누가 버전관리를 할것인가...)
-  2. Google Cloud에서 활용하기 어려움 (`Cloud sdk`의 경우도 우분와 데비안만 지원)
+  2. Google Cloud에서 활용하기 어려움 (GCP에서 공식적으로 지원하는 리눅스는 CentOS/Debian/Red Hat/Ubuntu 4종으로 arch 리눅스를 사용시 애로사항이 많을 것으로 예상)
 - 
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
 - https://rightway-park.tistory.com/3
