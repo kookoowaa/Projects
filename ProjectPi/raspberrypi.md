@@ -68,8 +68,11 @@
      >   export QT_IM_MODULE=$IM
      >   export XIM=$IM
      >   ```
-     
-  5. Python 분석환경 구축
+## 2. 사용 환경 구축
+  
+  1. 마크다운 에디터 설치
+ 
+  2. Python 분석환경 구축
 
      - `pip`, `jupyter notebook`, `gcloud sdk` 등 python 환경을 구축하려다 보니 몇가지 문제에 맞닥뜨리게 됨
        1. `pip` 를 통해 파이썬 패키지를 관리할 시 `pacman`과 충돌 (`pip` vs `pacman` 누가 버전관리를 할것인가...)
