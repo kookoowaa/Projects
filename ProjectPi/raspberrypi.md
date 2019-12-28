@@ -72,6 +72,7 @@
   
   1. 마크다운 에디터 설치
      - arm architecture 지원하는 마크다운 에디터를 찾기 쉽지 않음
+     - Typora의 경우 arm에서 지원하지 않으며, ReText는 깃허브 스타일의 마크다운을 보여주지 않아 사용하기 불편
   2. Python 분석환경 구축
 
      - `pip`, `jupyter notebook`, `gcloud sdk` 등 python 환경을 구축하려다 보니 몇가지 문제에 맞닥뜨리게 됨
