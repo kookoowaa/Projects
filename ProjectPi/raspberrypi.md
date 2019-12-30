@@ -96,9 +96,26 @@
   1. `pip` 를 통해 파이썬 패키지를 관리할 시 `pacman`과 충돌 (`pip` vs `pacman` 누가 버전관리를 할것인가...)
   2. Google Cloud에서 활용하기 어려움 (GCP에서 공식적으로 지원하는 리눅스는 CentOS/Debian/Red Hat/Ubuntu 4종으로 arch 리눅스를 사용시 애로사항이 많을 것으로 예상)
   
-  
 - `Raspbian`은 우분투 계열 os로 라즈베리에 맞춰져 세팅해 놓았기 때문에 오류가 적을 것으로 예상
+
 - https://rightway-park.tistory.com/3
+
 - 설치 후 한글 세팅은 `sudo apt-get fonts-unfonts-core`로 설정 가능
+
 - https://dgkim5360.tistory.com/entry/basic-setup-of-korean-environment-for-arch-linux
+
 - https://blog.gaerae.com/2014/03/raspberrypi-archlinux-vim.html
+
+  
+
+  
+
+  
+
+## etc. Google Cloud와 Manjaro
+
+- Manjaro는 Google Cloud에서 공식적으로 지원하는 리눅스가 아님
+- 몇가지 이유가 있겠지만, 안정성이 주 원인이 아닐까 싶음
+- Rolling Release 때문에 도리어 안정성에 해가 되는 경우가 생김 (*I would choose a really stable and not moving distribution without all the bleeding edge component that can break your site at any time.*)
+- 
+
