@@ -116,5 +116,4 @@
 
 - Manjaro는 Google Cloud에서 공식적으로 지원하는 리눅스가 아님
 - 몇가지 이유가 있겠지만, 안정성이 주 원인이 아닐까 싶음
-- Rolling Release 때문에 도리어 안정성에 해가 되는 경우가 생김 (*I would choose a really stable and not moving distribution without all the bleeding edge component that can break your site at any time.*)
-- 
+- Rolling Release 때문에 도리어 안정성에 해가 되는 경우가 생김 (*I would choose a really stable and not moving distribution without **all the bleeding edge component **that can break your site at any time.*)
