@@ -88,7 +88,7 @@
 
 ## etc. Manjaro 대신 Raspbian 시도
 
-- Rolling Release의 이점 떄문에 여러 난관에도 불구하고 Manjaro를 사용하려 했으나 몇가지 문제로 인해 우분투 계열의 `Raspbian`으로 넘어가기로 결정
+- Rolling Release의 이점 떄문에 여러 난관에도 불구하고 Manjaro를 사용하려 했으나 몇가지 문제로 인해 Debian 계열의 `Raspbian`으로 넘어가기로 결정
   1. 라즈베리파이에 맞춘 `manjaro`이지만 그래도 `Raspbian`에 비해 아무래도 무겁다
   2. `Ubuntu`(`debian`)에 비해 정보 찾기가 어려워, 리눅스 초보자가 배워나가기 어렵다
   3. 결정적으로 rolling release가 답이 아니라는 결론을 내리게 됨
