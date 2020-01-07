@@ -23,10 +23,15 @@
 3. 한글 설정
    - 리눅스에서는 기본적으로 한글 입력기를 지원하지 않으므로, 별도의 설치를 통해야만 한글 입력이 가능함
    - 입력기 또한 종류가 여러가지이고 (`ibus`, `nabi`, `fcitx` 등) 개인과 잘 맞는 입력기를 선택하면 됨
-   - 개인적으로 `ibus` & `nabi` 입력기를 선호하여 둘의 조합으로 진행
-   - 
-4. 기타 추가 설정
-   - 
+   - 개인적으로 `ibus` & `nabi` 입력기를 선호하여 둘의 조합으로 진행: `sudo apt install ibus ibus-hangul nabi`
+   - 설치 후 [Preference] - [Input Method]에서 입력기를 `hangul`로 설정
+   - 한글 출력을 위한 폰트도 별도로 설정 필요: `sudo apt install fonts-unfonts-core`
+4. 기타 추가 설정 [Raspberry Pi Configuration]
+   - `System` 탭에서 `Overscan`을 disable하여 화면 크기 맞추기 옵션을 해제
+   - `Interfaces` 탭에서 필요한 포트를 개방: `SSH`, `VNC`, `Remote GPIO`, `Camera`
+   - `Performance` 탭에서 `GPU Memory`를 256MB로 설정
 5. 고정 IP 설정
+   - 
 6. RPI(파이커널) 업데이트
+   - 
 
