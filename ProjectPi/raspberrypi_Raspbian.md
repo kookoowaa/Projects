@@ -4,7 +4,10 @@
 
 ## 1. `Raspbian` 설치
 
-- 
+- 최신 버전의 Raspbian은 https://www.raspberrypi.org/downloads/raspbian/ 에서 다운로드 가능
+- 다운받은 이미지와 SD카드로 Raspbian을 플래싱 하려면 별도의 프로그램이 요구되면 `Etcher`가 가장 무난했었음
+- 플래싱 된 SD카드로 라즈비안을 부팅하면 기본 세팅을 위한 설정을 진행
+- 유난히 주의할 점은 없으나, 개인적으로 locale은 영어로 하는 것이 자료를 찾아보기 용이했었음 (+ 부팅시 한글 폰트가 없어 깨져보이기도 함)
 
 ## 2. Raspbian 환경 설정
 
