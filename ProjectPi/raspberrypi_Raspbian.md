@@ -34,7 +34,24 @@
    - `Interfaces` 탭에서 필요한 포트를 개방: `SSH`, `VNC`, `Remote GPIO`, `Camera`
    - `Performance` 탭에서 `GPU Memory`를 256MB로 설정
 5. 고정 IP 설정
-   - 
+   
+   - 라즈베리파이를 일반 PC 사용하듯이 사용하는 것이 목적이라면, 공유기를 통해 동적으로(DHCP를 이용하여) IP 주소를 할당받아 사용하는 것이 별 문제가 되지 않음
+   
+   - 하지만 파일서버나 (NAS) DB 등으로 활용하기 위해서는 고정 IP를 사용하는 것이 편리함
+   
+   - 데비안에서 해당 설정은 `dhcpcd.conf`를 통해 수정 `sudo nano /etc/dhcpcd.conf`
+   
+   - 파일 끝에 다음 코드를 추가:
+   
+     ```
+     interface wlan0
+     static ip_address=192.168.0.80
+     static routers=192.168.0.1
+     static domain_name_servers=8.8.8.8
+     ```
+   
+   - 재부 팅 수 `ifconfig`로 고정된 ip를 확인하면 `wlan0`의 `inet`이 `192.168.0.80`으로 설정된 것을 확인 할 수 있음
 6. RPI(파이커널) 업데이트
+   
    - 
 
