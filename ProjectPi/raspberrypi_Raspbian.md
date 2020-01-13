@@ -50,9 +50,13 @@
      static domain_name_servers=8.8.8.8
      ```
    
-   - 재부 팅 수 `ifconfig`로 고정된 ip를 확인하면 `wlan0`의 `inet`이 `192.168.0.80`으로 설정된 것을 확인 할 수 있음
+   - 재부 팅 후 `ifconfig`로 고정된 ip를 확인하면 `wlan0`의 `inet`이 `192.168.0.80`으로 설정된 것을 확인 할 수 있음
 6. RPI(파이커널) 업데이트
    
    - 커널 업데이트는 `sudo rpi-update`로 수행
+   - 
+   
+7. VNC 설정
+
    - 
 
