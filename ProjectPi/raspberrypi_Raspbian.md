@@ -61,5 +61,9 @@
    - 확인 결과 데스크탑은 인터넷 회선에서 바로 유선으로 연결 (공유기 거치지 않음), 무선 인터넷은 공유기를 거치기 때문에 외부 IP주소가 다름
    - 공유기에서 포트포워딩을 설정하여 **<외부IP>:포트**를 통해 VNC 접속 필요
    - 일반적으로 192.168.0.1로 접속하면 iptime, tplink 등 공유기 설정 가능하고, 포트포워딩 설정도 여기에서 가능
-   - 포트포워딩 항목에 들어가서 서비스포트와 내부포트를 설정해 주고, IP 주소는 위에서 설정한 고정 IP 주소를 기입하여 설정 완료 (https://soulslip.tistory.com/99)
+   - 포트포워딩 항목에 들어가서 서비스포트와 내부포트(default:5900)를 설정해 주고, IP 주소는 위에서 설정한 고정 IP 주소를 기입하여 설정 완료 (https://soulslip.tistory.com/99)
 
+8. SSH 연결
+   - putty 설치 후 VNC 처럼 **<외부IP>:포트**를 통해 접속을 사도하면 "Fatal error: remote side unexpectedly closed network connection"와 함께 실패를 맛보게 됨
+   - SSH는 VNC와 다른 내부포트(default:22)를 사용하기 때문에, 위와 같이 네트워크 장비에서 포트포워딩을 추가로 설정해 주어야 함
+   - 설정 후 putty를 통해 접속 시도하면 아이디(default:pi)와 비밀번호(default:raspberry)를 입력하고 터미널 접속이 가능함
