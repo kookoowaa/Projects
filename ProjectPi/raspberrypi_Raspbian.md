@@ -67,3 +67,8 @@
    - putty 설치 후 VNC 처럼 **<외부IP>:포트**를 통해 접속을 사도하면 "Fatal error: remote side unexpectedly closed network connection"와 함께 실패를 맛보게 됨
    - SSH는 VNC와 다른 내부포트(default:22)를 사용하기 때문에, 위와 같이 네트워크 장비에서 포트포워딩을 추가로 설정해 주어야 함
    - 설정 후 putty를 통해 접속 시도하면 아이디(default:pi)와 비밀번호(default:raspberry)를 입력하고 터미널 접속이 가능함
+   
+9. `docker/container` 구축
+   - `docker/container`라는 개념 자체가 간단히 집고 넘어갈 개념은 아니지만, 사용자 입장에서 쉽게 설명하자면 컴퓨터를 영역 별로 분리하여 활용하기 위한 방법임
+   - 기존에는 가상화라는 방법도 많이 사용하였지만 가상화를 대체하는 훨씬 가벼운 방식
+   - https://www.slideshare.net/pyrasis/docker-fordummies-44424016
