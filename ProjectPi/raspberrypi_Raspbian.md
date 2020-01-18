@@ -70,5 +70,9 @@
    
 9. `docker/container` 구축
    - `docker/container`라는 개념 자체가 간단히 집고 넘어갈 개념은 아니지만, 사용자 입장에서 쉽게 설명하자면 컴퓨터를 영역 별로 분리하여 활용하기 위한 방법임
-   - 기존에는 가상화라는 방법도 많이 사용하였지만 가상화를 대체하는 훨씬 가벼운 방식
-   - https://www.slideshare.net/pyrasis/docker-fordummies-44424016
+   - 기존에는 가상화라는 방법도 많이 사용하였지만 가상화를 대체하는 훨씬 가벼운 방식 (https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
+   - 다음 명령어로 리눅스 배포판 종류를 자동으로 인식, 이후 도커를 설치 가능
+   ```shell
+   $ sudo wget -qO- https://get.docker.com/ | sh
+   ```
+   - 112pg
