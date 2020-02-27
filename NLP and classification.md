@@ -10,6 +10,7 @@
 - word2vec, Bidirectional RNN, GRU, 임베딩 시각화 (2018.06): https://excelsior-cjh.tistory.com/156?category=940399
 
 ## BERT
+- BERT에 대해 쉽게 알아보기1 - BERT는 무엇인가, 동작구조 (2020.02): https://ebbnflow.tistory.com/151
 - ELMo, Transformer, BERT에 대한 간략 정리(2019.11): http://blog.naver.com/PostView.nhn?blogId=wpdls6012&logNo=221721511272
 - 딥러닝으로 동네생활 게시글 필터링하기 (당근마켓, 2019.05): https://medium.com/daangn/%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9C%BC%EB%A1%9C-%EB%8F%99%EB%84%A4%EC%83%9D%ED%99%9C-%EA%B2%8C%EC%8B%9C%EA%B8%80-%ED%95%84%ED%84%B0%EB%A7%81%ED%95%98%EA%B8%B0-263cfe4bc58d
 - 인공지능(AI) 언어모델 ‘BERT(버트)'는 무엇인가 (2019.01): http://www.aitimes.kr/news/articleView.html?idxno=13117
@@ -17,3 +18,6 @@
 - BERT 톺아모기 (2018.12): http://docs.likejazz.com/bert/
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2019.08): https://soobarkbar.tistory.com/47
 - Recent Trends in Deep Learning Based Natural Language Processing (2019.12): http://blog.naver.com/PostView.nhn?blogId=kryj9625&logNo=221745319803
+- **구글 Colab을 이용한 BERT-Base Model 학습하기 (2019.04): https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html**
+- **BERT-Multilingual model을 이용해 KorQuAD 수행 해보기 http://mlgalaxy.blogspot.com/2019/01/bert-multilingual-model-korquad-part-1.html**
+- Simple BERT using TensorFlow 2.0 (2019.08): https://towardsdatascience.com/simple-bert-using-tensorflow-2-0-132cb19e9b22
