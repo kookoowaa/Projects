@@ -11,6 +11,7 @@
 
 ## BERT
 - BERT에 대해 쉽게 알아보기1 - BERT는 무엇인가, 동작구조 (2020.02): https://ebbnflow.tistory.com/151
+- BERT 세미나용 - 초등학생도 이해할 수 있는 수준으로 (2019.09): https://sayhellotoai.blogspot.com/2019/09/bert.html
 - ELMo, Transformer, BERT에 대한 간략 정리(2019.11): http://blog.naver.com/PostView.nhn?blogId=wpdls6012&logNo=221721511272
 - 딥러닝으로 동네생활 게시글 필터링하기 (당근마켓, 2019.05): https://medium.com/daangn/%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9C%BC%EB%A1%9C-%EB%8F%99%EB%84%A4%EC%83%9D%ED%99%9C-%EA%B2%8C%EC%8B%9C%EA%B8%80-%ED%95%84%ED%84%B0%EB%A7%81%ED%95%98%EA%B8%B0-263cfe4bc58d
 - 인공지능(AI) 언어모델 ‘BERT(버트)'는 무엇인가 (2019.01): http://www.aitimes.kr/news/articleView.html?idxno=13117
