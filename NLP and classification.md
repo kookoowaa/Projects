@@ -1,4 +1,6 @@
 # NLP and clustering with review data
+>- Transfer 러닝 고려 (네이버 리뷰? IRW 리뷰?)
+
 
 ## General understanding of text analysis
 - 텍스트 마이닝 기법을 이용한 경제심리 관련 문서 분류(서울대학교/한국은행, 2017): https://wikidocs.net/book/2155 (**deprecated**)
