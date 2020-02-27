@@ -23,3 +23,4 @@
 - **구글 Colab을 이용한 BERT-Base Model 학습하기 (2019.04): https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html**
 - **BERT-Multilingual model을 이용해 KorQuAD 수행 해보기 http://mlgalaxy.blogspot.com/2019/01/bert-multilingual-model-korquad-part-1.html**
 - Simple BERT using TensorFlow 2.0 (2019.08): https://towardsdatascience.com/simple-bert-using-tensorflow-2-0-132cb19e9b22
+- Korean BERT pre-trained cased (2020.02): https://github.com/SKTBrain/KoBERT- 
