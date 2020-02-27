@@ -19,6 +19,7 @@
 - BERT 톺아모기 (2018.12): http://docs.likejazz.com/bert/
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2019.08): https://soobarkbar.tistory.com/47
 - Recent Trends in Deep Learning Based Natural Language Processing (2019.12): http://blog.naver.com/PostView.nhn?blogId=kryj9625&logNo=221745319803
+- **BERT 2.0(TensorFlow) 사용 가이드 (google): https://cloud.google.com/tpu/docs/tutorials/bert-2.x?hl=ko**
 - **구글 Colab을 이용한 BERT-Base Model 학습하기 (2019.04): https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html**
 - **BERT-Multilingual model을 이용해 KorQuAD 수행 해보기 http://mlgalaxy.blogspot.com/2019/01/bert-multilingual-model-korquad-part-1.html**
 - Simple BERT using TensorFlow 2.0 (2019.08): https://towardsdatascience.com/simple-bert-using-tensorflow-2-0-132cb19e9b22
