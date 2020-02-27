@@ -7,6 +7,9 @@
 - 한국어 임베딩(2019.09): https://ratsgo.github.io/natural%20language%20processing/2019/09/12/embedding/
 - 한국어 임베딩 튜토리얼페이지: https://ratsgo.github.io/embedding/
 - 딥 러닝을 이용한 자연어 처리 입문 (2020.02): https://wikidocs.net/book/2155
+
+## Word2Vec
+- Word2Vec으로 문장 분류하기 (2017.03): https://ratsgo.github.io/natural%20language%20processing/2017/03/08/word2vec/
 - word2vec, Bidirectional RNN, GRU, 임베딩 시각화 (2018.06): https://excelsior-cjh.tistory.com/156?category=940399
 
 ## BERT
