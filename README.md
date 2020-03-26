@@ -18,4 +18,4 @@ Data analysis projects using data mining, machine learning, etc.
 - Bayesian hierarchical regression model has been used to explain the degree of various promotion activities.
 - (To be updated..)
 
-### tbd
+### [Korean Embedding(NLP)]
