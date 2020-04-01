@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>JSON에 대해 알아보자</title>
+
+</head>
+
+<body>
+
+	<h1>JSON</h1>
+
+	<script>
+
+		var person = { //자연적인 선언법
+
+				firstName : "selly",
+
+				lastName : "Rally",
+
+				age : 20,
+
+				nationality : "English"
+
+		}
+
+        document.write(person.firstName)
+
+
+		var person2 = new Object(); //JSON은 object 타입
+
+			person2.firstName = "selly";
+
+			person2.lastName = "Rally";
+
+			person2.age = 20;
+
+			person2.nationality = "English";
+
+		document.write("<h1>JSON person2 출력</h1>");
+
+		for(var key in person2){
+
+			document.write("<h3> key : "+key+" // value : "+person2[key]+"</h3>");
+
+		}
+
+		document.write("<hr/>");
+
+		document.write("<h1>함수로 JSON 생성하고 출력</h1>");
+
+
+
+		var englishPerson = function (first,last,age){
+
+			this.firstName = first;
+
+			this.lastName = last;
+
+			this.age = age;
+
+			this.nationality = "English";
+
+			this.name = function(){return this.lastName +' '+ this.firstName;};
+
+		}
+
+		var kjs = new englishPerson("Jason","Kim","32");
+
+		for(var key in kjs){
+
+			document.write("<h3> key : "+key+" // value : "+kjs[key]+"</h3>");
+
+		}
+
+		document.write("<h3> kjs의 이름은 :"+kjs.lastName+" "+kjs.firstName+"</h3>");
+
+		document.write("<h3> kjs의 이름은 :"+kjs.name()+"</h3>");
+
+		
+
+		var people = [kjs, 
+
+		              new englishPerson("aaa","A",33),
+
+		              new englishPerson("bbb","B",44), 
+
+		              new englishPerson("ccc","C",55), 
+
+		             ];
+
+		for(var i=0; i<people.length; i++){
+
+			for(var key in people[i]){
+
+				document.write("<h3>"+key+" : "+people[i][key]+"</h3>");
+
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html>
