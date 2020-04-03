@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript - Get selected value from dropdown list</title>
+	</head>
+
+	<body>
+
+		<h1>JavaScript - Get selected value from dropdown list</h1>
+
+		
+		
+		<select id="country">
+			<option value="None">-- Select --</option>
+			<option value="캠페인 25-5<br>캠페인 22-3\n캠페인 13-1\n캠페인 12-1\n캠페인 9-5\n캠페인 3-7">공주의 아침식사</option>
+			<option value="ID002" selected>United State</option>
+			<option value="ID003">Malaysia</option>
+		</select>
+
+        <p id="result">United State</p>
+
+		<script>
+            var test = {"ID002":1}
+			function GetSelectedValue(){
+				var e = document.getElementById("country");
+				var result = e.options[e.selectedIndex].value;
+				
+				//document.getElementById("result").innerHTML = result;
+                test[document.getElementById("result")] = result;
+			}
+
+			function GetSelectedText(){
+				var e = document.getElementById("country");
+				var result = e.options[e.selectedIndex].text;
+				
+				document.getElementById("result").innerHTML = result;
+			}
+			
+		</script>
+
+		<br/>
+		<br/>
+		<button type="button" onclick="GetSelectedValue()">Get Selected Value</button>
+
+		<button type="button" onclick="GetSelectedText()">Get Selected Text</button>
+	</body>
+
+</html>
