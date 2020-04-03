@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <head>
 	<meta charset='UTF-8'>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>디히 배지 드랍 위치 헬퍼</title>
 	
 	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162728121-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-162728121-1');
+	</script>
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<!-- Global site tag Google AdSense -->
+	<script data-ad-client="ca-pub-7667323025241548" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	<script src="jquery.min.js"></script>
 
 	<script>
 		var badges = {'하얀색': {'1번 다임': '캠페인 18-5\n캠페인 9-6\n캠페인 7-7\n캠페인 6-7\n캠페인 6-2\n캠페인 4-4\n캠페인 3-5\n캠페인 3-4\n캠페인 2-7\n캠페인 2-5\n캠페인 2-3\n캠페인 1-6\n캠페인 1-4',
@@ -259,14 +271,16 @@
 		});
 
 		function GetLocation(){
-				var e1 = document.getElementById("json-one");
-				var r1 = e1.options[e1.selectedIndex].text;
-				var e2 = document.getElementById("json-two");
-				var r2 = e2.options[e1.selectedIndex].text;
-				var result = badges[r1][r2].replace(/\n/g,"<br>")
+			
+			var e1 = document.getElementById("json-one");
+			var r1 = e1.options[e1.selectedIndex].text;
+			var e2 = document.getElementById("json-two");
+			var r2 = e2.options[e2.selectedIndex].text;
+			var result = badges[r1][r2].replace(/\n/g,"<br>")
 			
 			document.getElementById("result").innerHTML = result;
 		}
+
 	</script>
 </head>
 
@@ -276,7 +290,7 @@
 		
 		<h1>배지 드랍 위치 헬퍼</h1>
 
-		<select id="json-one">
+		<select id="json-one" style="min-height:30px;">
 			<option selected value="base">배지 등급</option>
 			<option value="white">하얀색</option>
 			<option value="green">초록색</option>
@@ -287,7 +301,7 @@
 	
 		<br />
 	
-		<select id="json-two">
+		<select id="json-two" style="min-height:30px;">
 			<option>배지 이름 선택</option>
 		</select>
 
