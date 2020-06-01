@@ -13,6 +13,7 @@ ___
 - Manjaro 이후 많이 사용되는 리눅스는 Linux Mint로 Ubuntu 계열임 (우분투 기반, 데비안 기반은 LMDE)
 - 공식적으로 지원되는 Ubuntu를 사용하는 것도 좋은 선택
 - Manjaro에 도전 (Manjaro는 라즈베리파이 용 os도 지원, Rufus로 세팅이 되지 않아 Etcher 사용)
+- **PACMAC**의 불편함으로 인해 Ubuntu 20.04 LTS로 전향
 
 ___
 
