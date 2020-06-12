@@ -1,19 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
+# author: Pablo Park
+# last update: 2020 June 12
+###########################
 
-# In[12]:
 
-
+# 사용된 라이브러리
+# requests: url 주소를 토대로 서버에서 html 데이터 수집
 import requests
+# bs4: requests로 가져온 html 데이터를 navigate
 from bs4 import BeautifulSoup as bs
+# pandas: 데이터 조작
 import pandas as pd
+# re: 텍스트 검색
 import re
+# openpyxl: 엑셀 파일 생성/저장
 import openpyxl
 
 
-# In[5]:
-
-
+# html에서 날짜만 가져오는 함수
+# html에서 날짜는 "categories: [날짜1, 날짜2, 날짜3...]},yAxis:..."" 구조로 구성
+# date_begin에 첫번째 날짜 시작 인덱스를 date_end에 마지막 날짜 인덱스를 저장한 후, csv로 구성된 날짜 데이터를 리스트로 반환
 def parse_date(txt):
     date_begin = re.compile('categories: \[')
     date_begin = date_begin.search(txt).span()[1]
@@ -22,7 +29,8 @@ def parse_date(txt):
     
     return txt[date_begin:date_end].replace('"','').split(',')
     
-    
+# html에서 데이터를 가져오는 함수
+# 날짜를 가져오는 함수와 동일한 로직을 사용하고, 다만 구조는 "data: [데이터1, 데이터2, 데이터3]}],responsive..."형태임
 def parse_data(txt):
     data_begin = re.compile('data: \[')
     data_begin = data_begin.search(txt).span()[1]
@@ -34,14 +42,17 @@ def parse_data(txt):
     return tmp
 
 
-# In[6]:
-
-
-def txt_to_html(txt):
+# 수집한 html에서 데이터를 추출하는 함수
+# 인풋은 html이, 아웃풋은 Python dictionary(JSON)이 됨
+# 함수 로직은 전체 html에서 1) "text/javascript"에 해당하는 html만 분리하고,
+#                         2) 분리한 "text/javascript"에서 "Total Coronavirus Cases"와 "Total Coronavirus Deaths"가 포함되어 있는 html만 남겨둠
+# 이후 위에서 만들어둔 parse_date()와 parse_data()를 사용하여 html에서 데이터만 분리
+# 분리한 데이터를 dictionary 형태로 정제하여 아웃풋으로 제공
+def html_manipulation(html):
     case_compile = re.compile('Total Coronavirus Cases')
     death_compile = re.compile('Total Coronavirus Deaths')
     
-    for script in txt.find_all(attrs={'type':"text/javascript"}):
+    for script in html.find_all(attrs={'type':"text/javascript"}):
         try:
             if bool(case_compile.search(script.contents[0])):
                 total_case = script.contents[0]
@@ -50,11 +61,12 @@ def txt_to_html(txt):
         except:
             pass
         
-#    total_case = txt.find_all(attrs={'type':"text/javascript"})[6].contents[0]
+#   total_case = html.find_all(attrs={'type':"text/javascript"})[6].contents[0]
     total_case  = total_case.replace('\n','').replace('\'', '"').replace('    ','')
- #   total_death = txt.find_all(attrs={'type':"text/javascript"})[8].contents[0]
+#   total_death = html.find_all(attrs={'type':"text/javascript"})[8].contents[0]
     total_death  = total_death.replace('\n','').replace('\'', '"').replace('    ','')
     
+    # 사전 정의된 사용자 함수 사용
     case_date = parse_date(total_case)
     case_data = parse_data(total_case)
     death_date = parse_date(total_death)
@@ -64,9 +76,10 @@ def txt_to_html(txt):
             'death_date': death_date, 'death_data':death_data}
 
 
-# In[7]:
-
-
+# html을 수집하는 함수
+# 인풋은 국가명으로 이루어진 리스트이며, 아웃풋은 html_manipulation에서 만든 dictionary가 국가 단위로 계층화 된 dictionary(json)임
+# (계층형 데이터: 국가 > date/nCase/nDeath > 데이터)
+# 리스트를 인풋으로 받으면 리스트의 순서대로 iterate 하면서 데이터를 수집하고, 위에서 정의한 html_manipulation() 함수를 호출하여 데이터만 정제
 def crawl_country(cnts):
     address = 'https://www.worldometers.info/coronavirus/country/'
     outcome = {}
@@ -76,42 +89,45 @@ def crawl_country(cnts):
         html = requests.get(web_add)
         soup = bs(html.text, 'html.parser')
         html.close()
-        tmp = txt_to_html(soup)   
+        tmp = html_manipulation(soup)   
         outcome[cnt] = tmp
     
     return outcome
 
 
-# In[8]:
+####################
+### 함수정의 완료 ### 
+### 프로그램 실행 ###
+####################
 
 
+# 추출 대상 국가 정의 ('https://www.worldometers.info/coronavirus/country/{국가명}')
 cnt_list = ['UK', 'France', 'Germany', 'Spain', 'Australia']
 
-
-# In[9]:
-
-
+# 위에서 정의내린 최상위 사용자 함수 실행하여 outcome 변수에 결과 값 할당
 outcome = crawl_country(cnt_list)
 
 
-# In[35]:
+#############################
+### 데이터추출 및 정제 완료 ###
+### 엑셀로 데이터 변환      ###
+#############################
 
 
+# 출력 파일명 및 위치 정의
 fout = 'COVID_worldometer.xlsx'
 
-
-# In[36]:
-
-
+# 엑셀 파일 생성
 wb = openpyxl.Workbook()
 wb.save(fout)
 
-
-# In[44]:
-
-
+# pandas로 엑셀파일을 열고, 위에서 정의 내린 국가명 cnt_list에 따라 시트를 생성하고 표 형식으로 데이터 저장
 with pd.ExcelWriter(fout) as ew:
     for cnt in cnt_list:
         df = pd.DataFrame(outcome[cnt]).iloc[:,[0,1,3]][::-1]
         df.to_excel(ew, sheet_name=cnt, index=False)
 
+
+####################
+### 프로그램 종료 ###
+####################
