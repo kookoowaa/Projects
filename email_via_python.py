@@ -11,7 +11,7 @@ A scheduled crawling everyday at 11:00
 Sent via Python on the Google Cloud Compute Engine
 """
 sender_email = "{sender@email}"
-recipient = ["{recipient@email}}", "{cc@email}}"]
+recipient = ["{recipient@email}", "{cc@email}"]
 receiver_email = recipient[0]
 cc_email = recipient[1]
 password = "{passwd!@#$}}"
