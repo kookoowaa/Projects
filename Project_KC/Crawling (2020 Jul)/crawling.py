@@ -43,7 +43,16 @@ def sto_summary():
     # Time
     now_hour = str(now.hour)
     # Net sales
-    acc_sales = driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[2]').text
+    #acc_sales = driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[2]').text
+    # net sales (taxable)
+    driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+    time.sleep(1)
+    acc_sales = driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[2]').text
+
     # Net transaction
     acc_transaction = driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[2]/ul/li[1]/ul/li[1]/div/div[2]').text
     # avg check (calculated)
