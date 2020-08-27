@@ -33,12 +33,12 @@ driver.find_element_by_xpath('//*[@id="auth0-lock-container-1"]/div/div[2]/form/
 time.sleep(5)
 driver.find_element_by_xpath('//*[@id="navigation"]/div/ul/li[2]/a/span').click()
 time.sleep(2)
-driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-time.sleep(2)
-driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-time.sleep(2)
-driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-time.sleep(2)
+#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+#time.sleep(2)
+#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+#time.sleep(2)
+#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+#time.sleep(2)
 
 # sales 추출 관련 function
 def sto_summary():
@@ -113,6 +113,14 @@ for i in range(len(summ)):
 
 # excel에 저장
 wb = Workbook()
+
+ws = wb.create_sheet('summary')
+ws.cell(1,1, value = summ[0].iloc[1,1])
+nrow, ncol = sales_summ.shape
+for r in range(nrow):
+    for c in range(ncol):
+        ws.cell(r+3,c+1, value = sales_summ.iloc[r,c])
+        
 for i in range(len(summ)):
     ws = wb.create_sheet()
     nrow, ncol = summ[i].shape
@@ -125,12 +133,8 @@ for i in range(len(summ)):
     for r in range(nrow):
         for c in range(ncol):
             ws.cell(r+1,c+4, value = range_mix[i].iloc[r,c])
-ws = wb.create_sheet('summary')
-ws.cell(1,1, value = summ[0].iloc[1,1])
-nrow, ncol = sales_summ.shape
-for r in range(nrow):
-    for c in range(ncol):
-        ws.cell(r+1,c+1, value = summ[i].iloc[r,c])
+
+
 wb.remove(wb['Sheet'])
 
 now = datetime.datetime.now()
