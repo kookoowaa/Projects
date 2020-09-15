@@ -33,12 +33,12 @@ driver.find_element_by_xpath('//*[@id="auth0-lock-container-1"]/div/div[2]/form/
 time.sleep(5)
 driver.find_element_by_xpath('//*[@id="navigation"]/div/ul/li[2]/a/span').click()
 time.sleep(2)
-#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-#time.sleep(2)
-#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-#time.sleep(2)
-#driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
-#time.sleep(2)
+driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="table_data_place"]/div[1]/div[1]/ul/li[1]/ul/li[1]/ul/li[1]/ul/li[1]/div/div[1]').click()
+time.sleep(2)
 
 # sales 추출 관련 function
 def sto_summary():
