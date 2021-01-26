@@ -1,33 +1,30 @@
-#!/usr/bin/env python
-# coding: utf-8
 # author: Pablo Park
-# last update: 2020 June 12
-###########################
+# source: https://github.com/kookoowaa/Projects/blob/master/crawler.py
+# last update: 2021 January 25th //날짜 데이터 포맷 변경
 
+# Required libraries
 
-# 사용된 라이브러리
-# requests: url 주소를 토대로 서버에서 html 데이터 수집
-import requests
-# bs4: requests로 가져온 html 데이터를 navigate
-from bs4 import BeautifulSoup as bs
-# pandas: 데이터 조작
-import pandas as pd
-# re: 텍스트 검색
-import re
-# openpyxl: 엑셀 파일 생성/저장
-import openpyxl
+import requests                           # requests: url 주소를 토대로 서버에서 html 데이터 수집을 가능케 함
+from bs4 import BeautifulSoup as bs       # bs4: requests로 가져온 html 데이터를 navigate
+import pandas as pd                       # pandas: 데이터 조작
+import re                                 # re: 텍스트 검색
+import openpyxl                           # openpyxl: 엑셀 파일 생성 및 저장
 
 
 # html에서 날짜만 가져오는 함수
-# html에서 날짜는 "categories: [날짜1, 날짜2, 날짜3...]},yAxis:..."" 구조로 구성
+
+# html에서 날짜는 "categories: [날짜1, 날짜2, 날짜3...]},yAxis:..." 구조로 구성
 # date_begin에 첫번째 날짜 시작 인덱스를 date_end에 마지막 날짜 인덱스를 저장한 후, csv로 구성된 날짜 데이터를 리스트로 반환
+
 def parse_date(txt):
     date_begin = re.compile('categories: \[')
     date_begin = date_begin.search(txt).span()[1]
     date_end = re.compile('\]},yAxis:')
     date_end = date_end.search(txt).span()[0]
     
-    return txt[date_begin:date_end].replace('"','').split(',')
+    tmp = txt[date_begin:date_end].split('","')
+    tmp = [i.replace('"','') for i in tmp]
+    return tmp ## 날짜 데이터에 연도 데이터가 추가되면서 replace 함수 제거
     
 # html에서 데이터를 가져오는 함수
 # 날짜를 가져오는 함수와 동일한 로직을 사용하고, 다만 구조는 "data: [데이터1, 데이터2, 데이터3]}],responsive..."형태임
