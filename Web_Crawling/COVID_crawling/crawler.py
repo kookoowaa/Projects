@@ -3,7 +3,6 @@
 # last update: 2021 January 25th //날짜 데이터 포맷 변경
 
 # Required libraries
-
 import requests                           # requests: url 주소를 토대로 서버에서 html 데이터 수집을 가능케 함
 from bs4 import BeautifulSoup as bs       # bs4: requests로 가져온 html 데이터를 navigate
 import pandas as pd                       # pandas: 데이터 조작
@@ -12,8 +11,7 @@ import openpyxl                           # openpyxl: 엑셀 파일 생성 및 �
 
 
 # html에서 날짜만 가져오는 함수
-
-# html에서 날짜는 "categories: [날짜1, 날짜2, 날짜3...]},yAxis:..." 구조로 구성
+# html에서 날짜는 문자데이터로, "categories: [날짜1, 날짜2, 날짜3...]},yAxis:..." 구조로 구성
 # date_begin에 첫번째 날짜 시작 인덱스를 date_end에 마지막 날짜 인덱스를 저장한 후, csv로 구성된 날짜 데이터를 리스트로 반환
 
 def parse_date(txt):
