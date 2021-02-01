@@ -24,6 +24,7 @@ def parse_date(txt):
     tmp = [i.replace('"','') for i in tmp]
     return tmp ## 날짜 데이터에 연도 데이터가 추가되면서 replace 함수 제거
     
+
 # html에서 데이터를 가져오는 함수
 # 날짜를 가져오는 함수와 동일한 로직을 사용하고, 다만 구조는 "data: [데이터1, 데이터2, 데이터3]}],responsive..."형태임
 def parse_data(txt):
